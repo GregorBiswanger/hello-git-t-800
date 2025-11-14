@@ -1,0 +1,17 @@
+# Workflow konfiguration
+name: Hallo World Workflow
+description: Nur eine Demo
+
+# Events
+on: push
+
+# Jobs (Aufgaben)
+jobs:
+    say-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Source-Code vom Projekt ziehen
+              uses: actions/checkout@v4.2.2
+            
+            - name: JavaScript ausführen
+              run: node ./src/hello-world.js
